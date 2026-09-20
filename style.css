@@ -1,0 +1,147 @@
+:root{
+    --text-primary: #403F3D;
+    --text-inverse: #E1D4C9;
+    --text-accent: #B0907A;
+    --bc-primary: #E1D4C9;
+    --bc-container: #665F55;
+    --overlay: #403F3D;
+    --bord-primary:#C1B6AD;
+    --bord-inverse: #665F55;
+}
+
+[data-theme="dark"]{
+    --text-primary: #E1D4C9;
+    --bc-primary: #292826;
+    --bc-container: #403F3D;
+    --overlay: #292826;
+    --bord-primary: #665F55;
+    --bord-inverse: #C1B6AD;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+}
+
+.container{
+    width: 1360px;
+    margin: 0 auto;
+}
+
+.header .container, .nav-list, .actions, .theme-switcher, .slider, .gallery, .footer .container{
+    display: flex;
+    align-items: center;
+}
+
+h1{
+    font-size: 72px;
+    line-height: 72px;
+    font-weight: 600;
+}
+
+h2{
+    font-size: 60px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: var(--text-primary);
+}
+
+.italic{
+    font-style:italic;
+    color: var(--text-accent);
+}
+
+
+
+body{
+    background-color: var(--bc-primary);
+    font-size: 16px;
+    color: var(--text-primary);
+}
+
+.header .container{
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.nav-list{
+    gap: 40px;
+}
+
+.theme-switcher{
+    width: 88px;
+height: 44px;
+border-radius: 100px;
+border: 1px solid black;
+border-color: var(--bord-primary);
+justify-content: space-between;
+margin-right: 20px;
+}
+
+.sun, .moon{
+width: 36px;
+height: 36px;
+display: flex;
+align-items: center;
+justify-content: center;
+
+border-radius: 100px;
+
+}
+
+.sun{
+    background-color: var(--text-accent);
+    margin-left: 2px;
+}
+
+.moon{
+    margin-right: 2px;
+}
+
+.menu-btn{
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.hero .container{
+    background: url(img/img-hero.jpg) no-repeat;
+    min-height: 644px;
+    border-radius: 40px;
+    padding: 100px;
+}
+
+.hero, .footer{
+    color: var(--text-inverse);
+}
+
+.hero-wrapper{
+    max-width: 530px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.descr-hero{
+    margin: 40px 0;
+    line-height: 24px;
+}
+
+.btn{
+    width: 200px;
+height: 64px;
+background-color: var(--bc-primary);
+border-radius: 100px;
+border: none;
+}
