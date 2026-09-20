@@ -235,6 +235,10 @@ body {
 margin-bottom: 40px;
 }
 
+#app .container{
+    justify-content: space-between;
+}
+
 .app-image {
     width: 630px;
     height: 630px;
@@ -266,9 +270,27 @@ font-size: 10px;
 text-align: left;
 }
 
+.footer{
+    margin-top: 50px;
+}
+
 .footer .container {
     background-color: var(--bc-container);
     border-radius: 40px;
     gap: 100px;
     padding: 100px;
+}
+
+.contacts-list{
+    margin-top: 40px;
+}
+
+.contacts-item{
+    margin-top: 20px;
+}
+
+.contacts-link{
+ color: var(--text-inverse);
+ display: flex;
+ gap: 8px;
 }
