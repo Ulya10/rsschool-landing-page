@@ -320,23 +320,23 @@ body {
 }
 
 .hamburger {
-display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 44px;
-  height: 44px;
-  padding: 12px 10px;
-  background: none;
-  border: none;
-  cursor: pointer;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 44px;
+    height: 44px;
+    padding: 12px 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 .hamburger span {
-  display: block;
-  height: 2px;
-  width: 100%;
-  background: #403F3D;
-  border-radius: 2px;
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: #403F3D;
+    border-radius: 2px;
 }
 
 @media (max-width: 768px) {
@@ -345,19 +345,19 @@ display: none;
     }
 
     .nav {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    left: 0;
-    background: var(--bc-primary);
-    padding: 40px;
-    display: none;
-    z-index: 10;
-  }
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        background: var(--bc-primary);
+        padding: 40px;
+        display: none;
+        z-index: 10;
+    }
 
-    .hamburger{
-    display: flex;
-  }
+    .hamburger {
+        display: flex;
+    }
 
     .slider-image {
         width: 480px;
@@ -370,11 +370,11 @@ display: none;
         display: none;
     }
 
-    .gallery{
+    .gallery {
         flex-direction: column;
     }
 
-    .gallery-column{
+    .gallery-column {
         width: 100%;
     }
 }
@@ -384,7 +384,55 @@ display: none;
         max-width: 348px;
     }
 
-.slider-image {
-width:348px;
+    .slider-image {
+        width: 348px;
+    }
 }
+
+.catalog h1 {
+    display: none;
+}
+
+.catalog-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.catalog-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    aspect-ratio: 310 / 506;
+    border-radius: 40px;
+    overflow: hidden;
+    background: var(--bc-primary);
+    cursor: pointer;
+    padding-bottom: 20px;
+    border: 1px solid var(--bord-primary);
+}
+
+.catalog-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.card-image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.card-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
