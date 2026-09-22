@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -17,8 +18,11 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <img src="img/logo-light.png" alt="logo" class="logo-light">
-                <img src="img/logo-dark.png" alt="logo" class="logo-dark">
+                <a href="#">
+                    <img src="img/logo-light.png" alt="logo" class="logo-light">
+                    <img src="img/logo-dark.png" alt="logo" class="logo-dark">
+                </a>
+
             </div>
             <nav class="nav">
                 <ul class="nav-list">
@@ -43,30 +47,25 @@
                                 fill="#403F3D" />
                         </svg></div>
                 </div>
-                <button class="menu-btn"><a href="catalog.html">Menu <svg width="20" height="20" viewBox="0 0 20 20"
-                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                <a class="menu-btn" href="catalog.html">Menu <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
 
-                            <path
-                                d="M14.167 9.76667V11.6667C14.167 14.8883 11.5553 17.5 8.33366 17.5C5.112 17.5 2.50033 14.8883 2.50033 11.6667V9.76667C2.50033 9.4353 2.76896 9.16667 3.10033 9.16667H13.567C13.8984 9.16667 14.167 9.4353 14.167 9.76667Z"
-                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path
-                                d="M10.0003 7.50008C10.0003 6.66675 10.5956 5.83341 11.786 5.83341C13.101 5.83341 14.167 4.76743 14.167 3.45246V2.91675"
-                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path
-                                d="M6.66634 7.5V7.08333C6.66634 5.70262 7.78563 4.58333 9.16634 4.58333C10.0868 4.58333 10.833 3.83714 10.833 2.91667V2.5"
-                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path
-                                d="M13.333 9.16675H15.4163C16.5669 9.16675 17.4997 10.0995 17.4997 11.2501C17.4997 12.4007 16.5669 13.3334 15.4163 13.3334H14.1663"
-                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg></a>
-                </button>
+                        <path
+                            d="M14.167 9.76667V11.6667C14.167 14.8883 11.5553 17.5 8.33366 17.5C5.112 17.5 2.50033 14.8883 2.50033 11.6667V9.76667C2.50033 9.4353 2.76896 9.16667 3.10033 9.16667H13.567C13.8984 9.16667 14.167 9.4353 14.167 9.76667Z"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M10.0003 7.50008C10.0003 6.66675 10.5956 5.83341 11.786 5.83341C13.101 5.83341 14.167 4.76743 14.167 3.45246V2.91675"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M6.66634 7.5V7.08333C6.66634 5.70262 7.78563 4.58333 9.16634 4.58333C10.0868 4.58333 10.833 3.83714 10.833 2.91667V2.5"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M13.333 9.16675H15.4163C16.5669 9.16675 17.4997 10.0995 17.4997 11.2501C17.4997 12.4007 16.5669 13.3334 15.4163 13.3334H14.1663"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg></a>
+
 
                 <button class="hamburger">
-                    <span></span>
                     <span></span>
                     <span></span>
                 </button>
@@ -86,7 +85,7 @@
                         Resource is a popular destination for coffee lovers and those seeking a warm and inviting space
                         to enjoy
                         their favorite beverage.</div>
-                    <button class="btn"><a href="catalog.html">Menu</a></button>
+                    <a href="catalog.html" class="btn">Menu</a>
                 </div>
 
             </div>
@@ -108,7 +107,7 @@
                         <h3 class="slider-title">S’mores Frappuccino</h3>
                         <div class="descr">This new drink takes an espresso and mixes it with brown sugar and
                             cinnamon before being topped with oat milk.</div>
-                        <div class="slider-price">$5.50</div>
+                        <div class="price">$5.50</div>
                         <div class="slider-controls">
                             <div class="slider-control control-active"></div>
                             <div class="slider-control"></div>
@@ -157,7 +156,7 @@
                         coffee from wherever you are</div>
 
                     <div class="download-btns">
-                        <button class="download-btn"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"
+                        <a href="http://appstore.com" class="download-btn"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M26.7073 18.6307C26.6704 14.6324 30.065 12.6872 30.2203 12.5966C28.2977 9.86366 25.3178 9.49026 24.2707 9.46048C21.7679 9.20369 19.3403 10.9206 18.0654 10.9206C16.765 10.9206 14.8017 9.48529 12.6858 9.52747C9.96293 9.56841 7.41566 11.1055 6.0186 13.4923C3.13542 18.359 5.28572 25.5108 8.04802 29.4446C9.42981 31.3712 11.0444 33.5223 13.1578 33.4466C15.2254 33.3635 15.9978 32.1614 18.4929 32.1614C20.9651 32.1614 21.6903 33.4466 23.8457 33.3983C26.0647 33.3635 27.4618 31.463 28.7952 29.519C30.392 27.3108 31.0333 25.1362 31.0588 25.0245C31.0066 25.0071 26.7493 23.4229 26.7073 18.6307Z"
@@ -170,8 +169,8 @@
                                 <p>Available on the</p>
                                 <p>App Store</p>
                             </div>
-                        </button>
-                        <button class="download-btn">
+                        </a>
+                        <a href="http://play.google.com" class="download-btn">
                             <svg width="36" height="36" viewBox="0 0 36 36" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -192,7 +191,7 @@
                                 <p>Available on</p>
                                 <p>Google Play</p>
                             </div>
-                        </button>
+                        </a>
 
 
                     </div>
@@ -208,14 +207,15 @@
             <div class="socials">
                 <h2>Sip, Savor, Smile.<br><span class="italic">It’s coffee time!</span></h2>
                 <ul class="social-links">
-                    <a href="https://twitter.com">
-                        <li class="social-link"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
+
+                    <li class="social-link"> 
+                        <a href="https://twitter.com"><svg width="24" height="24"
+                                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M23 3.01006C23 3.01006 20.9821 4.20217 19.86 4.54006C19.2577 3.84757 18.4573 3.35675 17.567 3.13398C16.6767 2.91122 15.7395 2.96725 14.8821 3.29451C14.0247 3.62177 13.2884 4.20446 12.773 4.96377C12.2575 5.72309 11.9877 6.62239 12 7.54006V8.54006C10.2426 8.58562 8.50127 8.19587 6.93101 7.4055C5.36074 6.61513 4.01032 5.44869 3 4.01006C3 4.01006 -1 13.0101 8 17.0101C5.94053 18.408 3.48716 19.109 1 19.0101C10 24.0101 21 19.0101 21 7.51006C20.9991 7.23151 20.9723 6.95365 20.92 6.68006C21.9406 5.67355 23 3.01006 23 3.01006Z"
                                     stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                    </a></li>
+                        </a></li>
                     <li class="social-link">
                         <a href="https://instagram.com"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -246,7 +246,8 @@
                 <h3>Contact us</h3>
                 <ul class="contacts-list">
                     <li class="contacts-item">
-                        <a href="https://www.google.com/maps?q=48.513891690605014,-122.33478151652291" target="_blank" rel="noopener noreferrer" class="contacts-link">
+                        <a href="https://www.google.com/maps?q=48.513891690605014,-122.33478151652291" target="_blank"
+                            rel="noopener noreferrer" class="contacts-link">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -275,26 +276,25 @@
                         </a>
                     </li>
                     <li class="contacts-item">
-                        
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_217_1736)">
-                                    <path d="M10 5L10 10L15 10" stroke="#E1D4C9" stroke-width="1.5"
-                                        stroke-linecap="round" stroke-linejoin="round" />
-                                    <path
-                                        d="M10.0003 18.3333C14.6027 18.3333 18.3337 14.6023 18.3337 9.99996C18.3337 5.39759 14.6027 1.66663 10.0003 1.66663C5.39795 1.66663 1.66699 5.39759 1.66699 9.99996C1.66699 14.6023 5.39795 18.3333 10.0003 18.3333Z"
-                                        stroke="#E1D4C9" stroke-width="1.5" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_217_1736">
-                                        <rect width="20" height="20" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
 
-                            <span>Mon–Sat: 9:00–23:00</span>
-                        
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_217_1736)">
+                                <path d="M10 5L10 10L15 10" stroke="#E1D4C9" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M10.0003 18.3333C14.6027 18.3333 18.3337 14.6023 18.3337 9.99996C18.3337 5.39759 14.6027 1.66663 10.0003 1.66663C5.39795 1.66663 1.66699 5.39759 1.66699 9.99996C1.66699 14.6023 5.39795 18.3333 10.0003 18.3333Z"
+                                    stroke="#E1D4C9" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_217_1736">
+                                    <rect width="20" height="20" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+
+                        <span>Mon–Sat: 9:00–23:00</span>
+
                     </li>
                 </ul>
             </div>
