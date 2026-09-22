@@ -78,6 +78,7 @@ a {
 button {
     background-color: var(--bc-primary);
     color: var(--text-primary);
+
 }
 
 
@@ -92,6 +93,18 @@ body {
     align-items: center;
     padding: 20px 0;
 }
+
+.logo{
+    align-items: center;
+    height: 60px;
+}
+
+.logo-dark {
+    display: none;
+}
+
+html[data-theme="dark"] .logo-light { display: none; }
+html[data-theme="dark"] .logo-dark  { display: block; }
 
 .nav-list {
     gap: 40px;
@@ -129,6 +142,11 @@ body {
 }
 
 .menu-btn {
+    border: none;
+    gap: 10px;
+}
+
+.menu-btn a {
     border: none;
     display: flex;
     align-items: center;
@@ -203,7 +221,8 @@ body {
 .slider-controls {
     display: flex;
     gap: 8px;
-    margin: 0 auto;
+    justify-content: center;
+    margin-top: 40px;
 }
 
 .slider-control {
@@ -303,6 +322,29 @@ body {
     border-radius: 40px;
     gap: 100px;
     padding: 100px;
+}
+
+.social-links {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-inverse);
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--bord-primary);
+    width: 60px;
+    height: 60px;
+    border-radius: 40px;
+
+}
+
+.social-link a {
+    color: var(--text-inverse);
 }
 
 .contacts-list {
