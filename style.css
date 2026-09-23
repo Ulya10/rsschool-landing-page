@@ -122,6 +122,8 @@ html[data-theme="dark"] .logo-dark {
     border-color: var(--bord-primary);
     justify-content: space-between;
     margin-right: 20px;
+    padding-right: 2px;
+    padding-left: 2px;
 }
 
 .sun,
@@ -131,19 +133,21 @@ html[data-theme="dark"] .logo-dark {
     display: flex;
     align-items: center;
     justify-content: center;
-
     border-radius: 100px;
-
+    transition: 0.2s all;
 }
 
-.sun {
+
+.sun.active{
     background-color: var(--text-accent);
-    margin-left: 2px;
+
 }
 
-.moon {
-    margin-right: 2px;
+.moon.active{
+    background-color: var(--text-accent);
+    color: var(--text-inverse);
 }
+
 
 .menu-btn {
     border: none;
