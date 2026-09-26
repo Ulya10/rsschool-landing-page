@@ -452,16 +452,33 @@ html[data-theme="dark"] .logo-dark {
     border: none;
     cursor: pointer;
     border: 1px solid var(--bord-inverse);
+    position: relative;
 }
 
+.hamburger.active span:first-child{
+    transform: translateY(-8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2){
+    transform: translateY(6px)rotate(-45deg);
+}
+
+
 .hamburger span {
+    position: absolute;
+    left: calc(50% - 8px);
+    top: 33%;
     display: block;
     width: 16px;
     height: 2px;
     background: var(--bord-inverse);
     border-radius: 2px;
+    transition: 0.3s all ease;
 }
 
+.hamburger span:first-child{
+top: 66%;
+}
 
 
 
@@ -722,7 +739,7 @@ html[data-theme="dark"] .logo-dark {
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    aspect-ratio: 310 / 506;
+    
     border-radius: 40px;
     overflow: hidden;
     background: var(--bc-primary);

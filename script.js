@@ -2,6 +2,7 @@ const switcher = document.querySelector('.theme-switcher');
 const root = document.documentElement;
 const sun = document.querySelector('.sun');
 const moon = document.querySelector('.moon');
+const hamburger = document.querySelector('.hamburger');
 
 if (root.getAttribute('data-theme') === 'dark') {
   moon.classList.add('active');
@@ -25,4 +26,8 @@ switcher.addEventListener('click', () => {
         moon.classList.add('active');
         sun.classList.remove('active');
     }
+});
+
+hamburger.addEventListener('click', () => {
+hamburger.classList.toggle('active');
 });
