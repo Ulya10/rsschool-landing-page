@@ -5,19 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
-    (function () {
-      const saved = localStorage.getItem('theme');
-      if (saved === 'dark') {
-        document.documentElement.setAttribute('data-theme', 'dark');
-      }
-    })();
-  </script>
+        (function () {
+            const saved = localStorage.getItem('theme');
+            if (saved === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
+        rel="stylesheet"> -->
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
@@ -94,21 +94,25 @@
                         to enjoy
                         their favorite beverage.</div>
                     <a href="catalog.html" class="btn">Menu<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
+                            xmlns="http://www.w3.org/2000/svg">
 
-                        <path
-                            d="M14.167 9.76667V11.6667C14.167 14.8883 11.5553 17.5 8.33366 17.5C5.112 17.5 2.50033 14.8883 2.50033 11.6667V9.76667C2.50033 9.4353 2.76896 9.16667 3.10033 9.16667H13.567C13.8984 9.16667 14.167 9.4353 14.167 9.76667Z"
-                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <path
-                            d="M10.0003 7.50008C10.0003 6.66675 10.5956 5.83341 11.786 5.83341C13.101 5.83341 14.167 4.76743 14.167 3.45246V2.91675"
-                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <path
-                            d="M6.66634 7.5V7.08333C6.66634 5.70262 7.78563 4.58333 9.16634 4.58333C10.0868 4.58333 10.833 3.83714 10.833 2.91667V2.5"
-                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <path
-                            d="M13.333 9.16675H15.4163C16.5669 9.16675 17.4997 10.0995 17.4997 11.2501C17.4997 12.4007 16.5669 13.3334 15.4163 13.3334H14.1663"
-                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg></a>
+                            <path
+                                d="M14.167 9.76667V11.6667C14.167 14.8883 11.5553 17.5 8.33366 17.5C5.112 17.5 2.50033 14.8883 2.50033 11.6667V9.76667C2.50033 9.4353 2.76896 9.16667 3.10033 9.16667H13.567C13.8984 9.16667 14.167 9.4353 14.167 9.76667Z"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M10.0003 7.50008C10.0003 6.66675 10.5956 5.83341 11.786 5.83341C13.101 5.83341 14.167 4.76743 14.167 3.45246V2.91675"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M6.66634 7.5V7.08333C6.66634 5.70262 7.78563 4.58333 9.16634 4.58333C10.0868 4.58333 10.833 3.83714 10.833 2.91667V2.5"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M13.333 9.16675H15.4163C16.5669 9.16675 17.4997 10.0995 17.4997 11.2501C17.4997 12.4007 16.5669 13.3334 15.4163 13.3334H14.1663"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg></a>
                 </div>
 
             </div>
@@ -118,30 +122,60 @@
             <div class="container">
                 <h2>Choose your <span class="italic">favorite</span> coffee</h2>
                 <div class="slider">
-                    <div class="arrow-left"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M18.5 12H6M12 18L6 12L12 6" stroke="currentColor" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg></div>
-                    <div class="slider-card">
-                        <div class="slider-image">
-                            <img src="img/coffee-slider-1.png" alt="Frappuccino">
+                    <div class="slider-wrapper">
+                        <div class="arrow-left"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18.5 12H6M12 18L6 12L12 6" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></div>
+                        <div class="slider-card-wrapper">
+                            <div class="slider-track">
+                                <div class="slider-card">
+                                    <div class="slider-image">
+                                        <img src="img/coffee-slider-1.png" alt="Frappuccino">
+                                    </div>
+                                    <h3 class="slider-title">S’mores Frappuccino</h3>
+                                    <div class="descr">This new drink takes an espresso and mixes it with brown sugar
+                                        and
+                                        cinnamon before being topped with oat milk.</div>
+                                    <div class="price">$5.50</div>
+                                </div>
+                                <div class="slider-card">
+                                    <div class="slider-image">
+                                        <img src="img/coffee-slider-2.png" alt="Caramel Macchiato">
+                                    </div>
+                                    <h3 class="slider-title">Caramel Macchiato</h3>
+                                    <div class="descr">Fragrant and unique classic espresso with rich caramel-peanut
+                                        syrup,
+                                        with
+                                        cream under whipped thick foam.</div>
+                                    <div class="price">$5.00</div>
+                                </div>
+                                <div class="slider-card">
+                                    <div class="slider-image">
+                                        <img src="img/coffee-slider-3.png" alt="Ice coffee">
+                                    </div>
+                                    <h3 class="slider-title">Ice coffee</h3>
+                                    <div class="descr">A popular summer drink that tones and invigorates. Prepared from
+                                        coffee, milk and ice.</div>
+                                    <div class="price">$4.50</div>
+                                </div>
+                            </div>
+
                         </div>
-                        <h3 class="slider-title">S’mores Frappuccino</h3>
-                        <div class="descr">This new drink takes an espresso and mixes it with brown sugar and
-                            cinnamon before being topped with oat milk.</div>
-                        <div class="price">$5.50</div>
-                        <div class="slider-controls">
-                            <div class="slider-control control-active"></div>
-                            <div class="slider-control"></div>
-                            <div class="slider-control"></div>
+
+                        <div class="arrow-right"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 12H18.5M12.5 18L18.5 12L12.5 6" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
                         </div>
                     </div>
-                    <div class="arrow-right"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M6 12H18.5M12.5 18L18.5 12L12.5 6" stroke="currentColor" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
+
+                    <div class="slider-controls">
+                        <div class="slider-control control-active"></div>
+                        <div class="slider-control"></div>
+                        <div class="slider-control"></div>
                     </div>
                 </div>
             </div>
@@ -179,8 +213,8 @@
                         coffee from wherever you are</div>
 
                     <div class="download-btns">
-                        <a href="http://appstore.com" class="download-btn"><svg width="36" height="36" viewBox="0 0 36 36" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
+                        <a href="http://appstore.com" class="download-btn"><svg width="36" height="36"
+                                viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M26.7073 18.6307C26.6704 14.6324 30.065 12.6872 30.2203 12.5966C28.2977 9.86366 25.3178 9.49026 24.2707 9.46048C21.7679 9.20369 19.3403 10.9206 18.0654 10.9206C16.765 10.9206 14.8017 9.48529 12.6858 9.52747C9.96293 9.56841 7.41566 11.1055 6.0186 13.4923C3.13542 18.359 5.28572 25.5108 8.04802 29.4446C9.42981 31.3712 11.0444 33.5223 13.1578 33.4466C15.2254 33.3635 15.9978 32.1614 18.4929 32.1614C20.9651 32.1614 21.6903 33.4466 23.8457 33.3983C26.0647 33.3635 27.4618 31.463 28.7952 29.519C30.392 27.3108 31.0333 25.1362 31.0588 25.0245C31.0066 25.0071 26.7493 23.4229 26.7073 18.6307Z"
                                     fill="currentColor" />
@@ -231,14 +265,15 @@
                 <h2>Sip, Savor, Smile.<br><span class="italic">It’s coffee time!</span></h2>
                 <ul class="social-links">
 
-                    <li class="social-link"> 
-                        <a href="https://twitter.com"><svg width="24" height="24"
-                                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <li class="social-link">
+                        <a href="https://twitter.com"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M23 3.01006C23 3.01006 20.9821 4.20217 19.86 4.54006C19.2577 3.84757 18.4573 3.35675 17.567 3.13398C16.6767 2.91122 15.7395 2.96725 14.8821 3.29451C14.0247 3.62177 13.2884 4.20446 12.773 4.96377C12.2575 5.72309 11.9877 6.62239 12 7.54006V8.54006C10.2426 8.58562 8.50127 8.19587 6.93101 7.4055C5.36074 6.61513 4.01032 5.44869 3 4.01006C3 4.01006 -1 13.0101 8 17.0101C5.94053 18.408 3.48716 19.109 1 19.0101C10 24.0101 21 19.0101 21 7.51006C20.9991 7.23151 20.9723 6.95365 20.92 6.68006C21.9406 5.67355 23 3.01006 23 3.01006Z"
                                     stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                        </a></li>
+                        </a>
+                    </li>
                     <li class="social-link">
                         <a href="https://instagram.com"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">

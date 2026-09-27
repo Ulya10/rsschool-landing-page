@@ -22,7 +22,8 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: "Inter", sans-serif;
+    font-family: sans-serif;
+    /* font-family: "Inter", sans-serif; */
     scroll-behavior: smooth;
 }
 
@@ -36,7 +37,8 @@
 .nav-list,
 .actions,
 .theme-switcher,
-.slider,
+.slider-wrapper,
+.slider-card-wrapper,
 .gallery,
 #app .container,
 .download-btns,
@@ -215,9 +217,59 @@ html[data-theme="dark"] .logo-dark {
     text-align: center;
 }
 
-.slider {
+.slider-wrapper {
     width: 100%;
     justify-content: space-between;
+}
+
+.slider-card-wrapper {
+    max-width: 480px;
+    overflow: hidden;
+}
+
+.slider-track{
+    display: flex;
+    transition: 0.3s ease;
+}
+
+.slider-card {
+flex: 0 0 100%;
+}
+
+.slider-image {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.slider-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.price {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.slider-controls {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.slider-control {
+    width: 40px;
+    height: 4px;
+    background-color: var(--bord-primary);
+    border-radius: 100px;
+}
+
+.control-active {
+    background-color: var(--bord-inverse);
 }
 
 .arrow-left,
@@ -261,47 +313,7 @@ html[data-theme="dark"] .logo-dark {
 
 
 
-.slider-card {
-    flex: 1 1 auto;
-    min-width: 0;
-    max-width: 480px;
-}
 
-.slider-image {
-    width: 100%;
-    max-width: 480px;
-    margin: 0 auto;
-}
-
-.slider-image img {
-    display: block;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
-.price {
-    font-weight: 700;
-    font-size: 24px;
-}
-
-.slider-controls {
-    display: flex;
-    gap: 8px;
-    justify-content: center;
-    margin-top: 40px;
-}
-
-.slider-control {
-    width: 40px;
-    height: 4px;
-    background-color: var(--bord-primary);
-    border-radius: 100px;
-}
-
-.control-active {
-    background-color: var(--bord-inverse);
-}
 
 .gallery {
     gap: 40px;
@@ -573,7 +585,7 @@ top: 66%;
         min-height: auto;
     }
 
-    .slider {
+    .slider-wrapper {
         justify-content: center;
     }
 
