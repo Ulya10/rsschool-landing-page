@@ -35,9 +35,38 @@ switcher.addEventListener('click', () => {
   }
 });
 
+function openMenu(){
+  hamburger.classList.add('active');
+  nav.classList.add('active');
+  document.documentElement.classList.add('no-scroll');
+}
+
+function closeMenu(){
+  hamburger.classList.remove('active');
+  nav.classList.remove('active');
+  document.documentElement.classList.remove('no-scroll');
+}
+
 hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('active');
-  nav.classList.toggle('active');
+  if(hamburger.classList.contains('active')){
+closeMenu();
+  } else {
+    openMenu();
+  }
+});
+
+nav.addEventListener('click', ()=>{
+  if(!nav.classList.contains('active')){
+return;
+  } else {
+    closeMenu();
+  }
+});
+
+document.addEventListener('keydown', (evt) => {
+  if (evt.key = 'escape' && nav.classList.contains('active')){
+    closeMenu();
+  }
 });
 
 const cardsLen = sliderCards.length;

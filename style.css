@@ -23,7 +23,15 @@
     padding: 0;
     margin: 0;
     font-family: "Inter", sans-serif;
-    scroll-behavior: smooth;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+html.no-scroll{
+    overflow: hidden;
+    scroll-behavior: auto;
 }
 
 .container {
@@ -160,7 +168,7 @@ html[data-theme="dark"] .logo-dark {
     transition: 0.3s all;
 }
 
-.menu-btn-tablet{
+.menu-btn-tablet {
     display: none;
 }
 
@@ -230,13 +238,13 @@ html[data-theme="dark"] .logo-dark {
     overflow: hidden;
 }
 
-.slider-track{
+.slider-track {
     display: flex;
     transition: 0.3s ease;
 }
 
 .slider-card {
-flex: 0 0 100%;
+    flex: 0 0 100%;
 }
 
 .slider-image {
@@ -470,11 +478,11 @@ flex: 0 0 100%;
     position: relative;
 }
 
-.hamburger.active span:first-child{
+.hamburger.active span:first-child {
     transform: translateY(-8px) rotate(45deg);
 }
 
-.hamburger.active span:nth-child(2){
+.hamburger.active span:nth-child(2) {
     transform: translateY(6px)rotate(-45deg);
 }
 
@@ -491,8 +499,8 @@ flex: 0 0 100%;
     transition: 0.3s all ease;
 }
 
-.hamburger span:first-child{
-top: 66%;
+.hamburger span:first-child {
+    top: 66%;
 }
 
 
@@ -522,7 +530,7 @@ top: 66%;
         padding-left: 60px;
     }
 
-    .header.container{
+    .header .container {
         position: relative;
     }
 
@@ -537,23 +545,43 @@ top: 66%;
         z-index: 10;
     }
 
-    .nav.active{
-       top: 0; 
-       display: flex;
-       width: 100vw;
-               top: 60px;
-        height: calc(100wh - 40px);
+    .nav.active {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        top: 100px;
+        height: calc(100vh - 100px);
+        align-items: center;
+  
     }
 
-    .nav-list{
+    .nav-list {
         flex-direction: column;
         align-items: center;
+        gap: 60px;
         width: 100%;
-
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 125%;
     }
 
     .menu-btn {
         display: none;
+    }
+
+    .menu-btn-tablet {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 125%;
+        margin-top: 100px;
+    }
+
+    .menu-btn-tablet svg{
+        width: 40px;
+        height: 40px;
     }
 
     .hamburger {
@@ -773,7 +801,7 @@ top: 66%;
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    
+
     border-radius: 40px;
     overflow: hidden;
     background: var(--bc-primary);
