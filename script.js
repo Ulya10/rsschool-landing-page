@@ -8,6 +8,7 @@ const sliderTrack = document.querySelector('.slider-track');
 const sliderWindow = document.querySelector('.slider-card-wrapper');
 const leftArrow = document.querySelector('.arrow-left');
 const rightArrow = document.querySelector('.arrow-right');
+const nav = document.querySelector('.nav');
 
 
 if (root.getAttribute('data-theme') === 'dark') {
@@ -36,6 +37,7 @@ switcher.addEventListener('click', () => {
 
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('active');
+  nav.classList.toggle('active');
 });
 
 const cardsLen = sliderCards.length;

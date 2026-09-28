@@ -22,8 +22,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: sans-serif;
-    /* font-family: "Inter", sans-serif; */
+    font-family: "Inter", sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -159,6 +158,10 @@ html[data-theme="dark"] .logo-dark {
     gap: 10px;
     border-bottom: 1px solid transparent;
     transition: 0.3s all;
+}
+
+.menu-btn-tablet{
+    display: none;
 }
 
 .hero {
@@ -519,6 +522,10 @@ top: 66%;
         padding-left: 60px;
     }
 
+    .header.container{
+        position: relative;
+    }
+
     .nav {
         position: absolute;
         top: 100%;
@@ -528,6 +535,21 @@ top: 66%;
         padding: 40px;
         display: none;
         z-index: 10;
+    }
+
+    .nav.active{
+       top: 0; 
+       display: flex;
+       width: 100vw;
+               top: 60px;
+        height: calc(100wh - 40px);
+    }
+
+    .nav-list{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
     }
 
     .menu-btn {
