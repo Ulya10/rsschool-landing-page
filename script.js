@@ -1,3 +1,4 @@
+
 const switcher = document.querySelector('.theme-switcher');
 const root = document.documentElement;
 const sun = document.querySelector('.sun');
@@ -146,4 +147,19 @@ sliderControls.addEventListener('click', (evt) => {
 });
 
 
+const catalogList = document.querySelector(".catalog-list");
+const tabs = document.querySelectorAll(".catalog-btn");
+
+function getProducts(category) {
+    return products.filter(item => item.category === category);
+}
+
+tabs.addEventListener('click', (evt) => {
+ const category = evt.target.data-category;
+ console.log(category);
+});
+function renderCard(){
+const card = document.createElement('li');
+
+}
 
