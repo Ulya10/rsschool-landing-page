@@ -36,36 +36,36 @@ switcher.addEventListener('click', () => {
   }
 });
 
-function openMenu(){
+function openMenu() {
   hamburger.classList.add('active');
   nav.classList.add('active');
   document.documentElement.classList.add('no-scroll');
 }
 
-function closeMenu(){
+function closeMenu() {
   hamburger.classList.remove('active');
   nav.classList.remove('active');
   document.documentElement.classList.remove('no-scroll');
 }
 
 hamburger.addEventListener('click', () => {
-  if(hamburger.classList.contains('active')){
-closeMenu();
+  if (hamburger.classList.contains('active')) {
+    closeMenu();
   } else {
     openMenu();
   }
 });
 
-nav.addEventListener('click', ()=>{
-  if(!nav.classList.contains('active')){
-return;
+nav.addEventListener('click', () => {
+  if (!nav.classList.contains('active')) {
+    return;
   } else {
     closeMenu();
   }
 });
 
 document.addEventListener('keydown', (evt) => {
-  if (evt.key = 'escape' && nav.classList.contains('active')){
+  if (evt.key = 'escape' && nav.classList.contains('active')) {
     closeMenu();
   }
 });
@@ -147,19 +147,29 @@ sliderControls.addEventListener('click', (evt) => {
 });
 
 
-const catalogList = document.querySelector(".catalog-list");
-const tabs = document.querySelectorAll(".catalog-btn");
-
-function getProducts(category) {
-    return products.filter(item => item.category === category);
-}
-
-tabs.addEventListener('click', (evt) => {
- const category = evt.target.data-category;
- console.log(category);
+const card = sliderCards[0];
+const cs = getComputedStyle(card);
+console.log({
+  width: cs.width,
+  padding: cs.padding,
+  border: cs.border,
+  boxSizing: cs.boxSizing,
+  minWidth: cs.minWidth,
+  maxWidth: cs.maxWidth,
+  flex: cs.flex,
+  flexBasis: cs.flexBasis,
+  offsetWidth: card.offsetWidth,
+  scrollWidth: card.scrollWidth,
 });
-function renderCard(){
-const card = document.createElement('li');
 
-}
-
+// Дети
+[...card.children].forEach((child, i) => {
+  const c = getComputedStyle(child);
+  console.log(`[${i}] ${child.tagName}.${child.className}:`, {
+    width: c.width,
+    padding: c.padding,
+    margin: c.margin,
+    offsetWidth: child.offsetWidth,
+    scrollWidth: child.scrollWidth,
+  });
+});

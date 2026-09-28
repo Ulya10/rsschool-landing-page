@@ -230,12 +230,16 @@ html[data-theme="dark"] .logo-dark {
 
 .slider-wrapper {
     width: 100%;
+    display: flex;
     justify-content: space-between;
+
 }
 
 .slider-card-wrapper {
+    width: 100%;
     max-width: 480px;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .slider-track {
@@ -245,6 +249,9 @@ html[data-theme="dark"] .logo-dark {
 
 .slider-card {
     flex: 0 0 100%;
+    min-width: 0;
+    max-width: 480px;
+
 }
 
 .slider-image {
@@ -283,6 +290,15 @@ html[data-theme="dark"] .logo-dark {
     background-color: var(--bord-inverse);
 }
 
+
+.slider-title,
+.descr,
+.price {
+    max-width: 100%;
+    overflow-wrap: break-word; 
+    word-wrap: break-word;
+}
+
 .arrow-left,
 .arrow-right {
     width: 60px;
@@ -304,6 +320,7 @@ html[data-theme="dark"] .logo-dark {
     background-color: var(--bc-container);
     color: var(--text-inverse);
 }
+
 
 .contacts-link:hover {
     border-bottom: 1px solid var(--text-inverse);
