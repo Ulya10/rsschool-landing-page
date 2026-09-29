@@ -67,6 +67,11 @@ document.addEventListener('keydown', (evt) => {
   if (evt.key = 'escape' && nav.classList.contains('active')) {
     closeMenu();
   }
+
+  if (evt.key = 'escape' && overlay.classList.contains('active')) {
+    closeModal();
+  }
+
 });
 
 const catalogList = document.querySelector(".catalog-list");
@@ -88,7 +93,7 @@ tabs.addEventListener('click', (evt) => {
   if (!currTab) {
     return;
   }
-currTab.classList.add('active');
+  currTab.classList.add('active');
   const category = currTab.dataset.category;
   const cardsData = getProducts(category);
   catalogList.textContent = '';
@@ -99,7 +104,7 @@ currTab.classList.add('active');
 
 const initData = getProducts('coffee');
 initData.forEach((item, i) => {
-    renderCard(item, i, 'coffee');
+  renderCard(item, i, 'coffee');
 });
 
 function renderCard(product, i, category) {
@@ -108,7 +113,8 @@ function renderCard(product, i, category) {
   const imgContainer = document.createElement('div');
   imgContainer.classList.add('card-image');
   const image = document.createElement('img');
-  image.src = `img/${category}-${i+1}.jpg`;
+  image.src = `img/${category}-${i + 1}.jpg`;
+  image.alt = product.name;
   const catalogContent = document.createElement('div');
   catalogContent.classList.add('catalog-content');
   const header = document.createElement('h3');
@@ -122,5 +128,51 @@ function renderCard(product, i, category) {
   catalogContent.append(header, descr, price);
   card.append(image, catalogContent);
   catalogList.append(card);
+  card.addEventListener('click', () => {
+    openModal(product, i, category);
+  })
 }
 
+const overlay = document.querySelector(".overlay");
+const modal = document.querySelector('.modal');
+const modalImg = document.querySelector('.modal-img');
+const modalImage = document.querySelector('.modal-image');
+const title = document.querySelector('.modal-info h3');
+const descr = document.querySelector('.descr');
+const priceWrapper = document.querySelector('.price-wrapper');
+const closeBtn = document.querySelector('.close-btn');
+const sizeItems = document.querySelectorAll('.size-item');
+const additivesItems = document.querySelectorAll('.additives-item');
+
+function openModal(product, i, category) {
+  overlay.classList.add('active');
+  title.textContent = product.name;
+  descr.textContent = product.description;
+  priceWrapper.textContent = product.price;
+  modalImage.src = `img/${category}-${i + 1}.jpg`;
+  modalImage.alt = product.name;
+
+  product.additives.forEach((item, i) => {
+    additivesItems[i].textContent = `${i + 1}. ${item.name}`;
+  });
+
+  Object.entries(product.sizes).forEach(([key, item], i) => {
+    sizeItems[i].textContent = `${key.toUpperCase()}. ${item.size}`;
+  });
+
+  document.documentElement.classList.add('no-scroll');
+}
+
+overlay.addEventListener('click', (evt) => {
+console.log(evt.target);
+  if (evt.target.classList.contains('overlay') || evt.target.classList.contains('close-btn')) {
+    closeModal();
+  }
+
+
+});
+
+function closeModal() {
+  overlay.classList.remove('active');
+  document.documentElement.classList.remove('no-scroll');
+}

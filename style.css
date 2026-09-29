@@ -4,7 +4,7 @@
     --text-accent: #B0907A;
     --bc-primary: #E1D4C9;
     --bc-container: #665F55;
-    --overlay: #403F3D;
+    --overlay: #403f3db6;
     --bord-primary: #C1B6AD;
     --bord-inverse: #665F55;
 }
@@ -13,7 +13,7 @@
     --text-primary: #E1D4C9;
     --bc-primary: #292826;
     --bc-container: #403F3D;
-    --overlay: #292826;
+    --overlay: #292826b0;
     --bord-primary: #665F55;
     --bord-inverse: #C1B6AD;
 }
@@ -25,11 +25,11 @@
     font-family: "Inter", sans-serif;
 }
 
-html{
-  scroll-behavior: smooth;
+html {
+    scroll-behavior: smooth;
 }
 
-html.no-scroll{
+html.no-scroll {
     overflow: hidden;
     scroll-behavior: auto;
 }
@@ -295,7 +295,7 @@ html[data-theme="dark"] .logo-dark {
 .descr,
 .price {
     max-width: 100%;
-    overflow-wrap: break-word; 
+    overflow-wrap: break-word;
     word-wrap: break-word;
 }
 
@@ -569,7 +569,7 @@ html[data-theme="dark"] .logo-dark {
         top: 100px;
         height: calc(100vh - 100px);
         align-items: center;
-  
+
     }
 
     .nav-list {
@@ -596,7 +596,7 @@ html[data-theme="dark"] .logo-dark {
         margin-top: 100px;
     }
 
-    .menu-btn-tablet svg{
+    .menu-btn-tablet svg {
         width: 40px;
         height: 40px;
     }
@@ -879,4 +879,58 @@ html[data-theme="dark"] .logo-dark {
     .catalog-list {
         grid-template-columns: repeat(1, 1fr);
     }
+}
+
+.overlay.active {
+    display: block;
+}
+
+.overlay {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--overlay);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.modal {
+    display: block;
+    max-width: 800px;
+    background-color: var(--bc-primary);
+    border-radius: 40px;
+    margin: 0 auto;
+    margin-top: 10%;
+    padding: 40px;
+}
+
+.modal-wrapper {
+    display: flex;
+    gap: 20px;
+
+}
+
+.modal-img{
+    max-width: 310px;
+    aspect-ratio: 1/1;
+}
+
+.modal-img img{
+    width: 100%;
+}
+
+.modal-inner-wrapper{
+    display: flex;
+}
+
+.modal-inner-item, .close-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid var(--bord-primary);
+    border-radius: 40px;
+    padding-left: 10px;
+    padding-right: 20px;
+    height: 46px;
 }

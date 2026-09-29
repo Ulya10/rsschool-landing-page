@@ -146,30 +146,3 @@ sliderControls.addEventListener('click', (evt) => {
   }
 });
 
-
-const card = sliderCards[0];
-const cs = getComputedStyle(card);
-console.log({
-  width: cs.width,
-  padding: cs.padding,
-  border: cs.border,
-  boxSizing: cs.boxSizing,
-  minWidth: cs.minWidth,
-  maxWidth: cs.maxWidth,
-  flex: cs.flex,
-  flexBasis: cs.flexBasis,
-  offsetWidth: card.offsetWidth,
-  scrollWidth: card.scrollWidth,
-});
-
-// Дети
-[...card.children].forEach((child, i) => {
-  const c = getComputedStyle(child);
-  console.log(`[${i}] ${child.tagName}.${child.className}:`, {
-    width: c.width,
-    padding: c.padding,
-    margin: c.margin,
-    offsetWidth: child.offsetWidth,
-    scrollWidth: child.scrollWidth,
-  });
-});

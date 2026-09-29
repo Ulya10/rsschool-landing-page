@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script>
-    (function () {
-      const saved = localStorage.getItem('theme');
-      if (saved === 'dark') {
-        document.documentElement.setAttribute('data-theme', 'dark');
-      }
-    })();
-  </script>
+    <script>
+        (function () {
+            const saved = localStorage.getItem('theme');
+            if (saved === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
     <link rel="icon" type="image/x-icon" href="favicon-cat.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,6 +23,31 @@
 </head>
 
 <body>
+    <div class="overlay">
+        <div class="modal">
+            <div class="modal-wrapper">
+                <div class="card-image modal-img"><img class="modal-image" src="img/coffee-1.jpg" alt=""></div>
+                <div class="modal-info">
+                    <h3></h3>
+                    <div class="descr"></div>
+                    <h4>Size</h4>
+                    <ul class="modal-inner-wrapper size">
+                        <li class="modal-inner-item size-item"></li>
+                        <li class="modal-inner-item size-item"></li>
+                        <li class="modal-inner-item size-item"></li>
+                    </ul>
+                    <h4>Additives</h4>
+                    <ul class="modal-inner-wrapper additives">
+                        <li class="modal-inner-item additives-item"></li>
+                        <li class="modal-inner-item additives-item"></li>
+                        <li class="modal-inner-item additives-item"></li>
+                    </ul>
+                    <div class="price-wrapper"></div>
+                    <button class="close-btn">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <header class="header">
         <div class="container">
             <div class="logo">
@@ -39,8 +64,8 @@
                     <li class="nav-item"><a href="index.html#app">Mobile app</a></li>
                     <li class="nav-item"><a href="index.html#contacts">Contact us</a></li>
                 </ul>
-                <a class="menu-btn menu-btn-tablet" href="catalog.html">Menu <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
+                <a class="menu-btn menu-btn-tablet" href="catalog.html">Menu <svg width="20" height="20"
+                        viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 
                         <path
                             d="M14.167 9.76667V11.6667C14.167 14.8883 11.5553 17.5 8.33366 17.5C5.112 17.5 2.50033 14.8883 2.50033 11.6667V9.76667C2.50033 9.4353 2.76896 9.16667 3.10033 9.16667H13.567C13.8984 9.16667 14.167 9.4353 14.167 9.76667Z"
@@ -119,7 +144,7 @@
                     </button>
                 </div>
                 <ul class="catalog-list">
-                    
+
                 </ul>
                 <button class="btn-more">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -134,20 +159,21 @@
             </div>
         </section>
     </main>
-<footer class="footer" id="contacts">
+    <footer class="footer" id="contacts">
         <div class="container">
             <div class="socials">
                 <h2>Sip, Savor, Smile.<br><span class="italic">It’s coffee time!</span></h2>
                 <ul class="social-links">
 
-                    <li class="social-link"> 
-                        <a href="https://twitter.com"><svg width="24" height="24"
-                                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <li class="social-link">
+                        <a href="https://twitter.com"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M23 3.01006C23 3.01006 20.9821 4.20217 19.86 4.54006C19.2577 3.84757 18.4573 3.35675 17.567 3.13398C16.6767 2.91122 15.7395 2.96725 14.8821 3.29451C14.0247 3.62177 13.2884 4.20446 12.773 4.96377C12.2575 5.72309 11.9877 6.62239 12 7.54006V8.54006C10.2426 8.58562 8.50127 8.19587 6.93101 7.4055C5.36074 6.61513 4.01032 5.44869 3 4.01006C3 4.01006 -1 13.0101 8 17.0101C5.94053 18.408 3.48716 19.109 1 19.0101C10 24.0101 21 19.0101 21 7.51006C20.9991 7.23151 20.9723 6.95365 20.92 6.68006C21.9406 5.67355 23 3.01006 23 3.01006Z"
                                     stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                        </a></li>
+                        </a>
+                    </li>
                     <li class="social-link">
                         <a href="https://instagram.com"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
