@@ -146,3 +146,6 @@ sliderControls.addEventListener('click', (evt) => {
   }
 });
 
+window.addEventListener('resize', () => {
+  jumpTo(currSlide);
+});
