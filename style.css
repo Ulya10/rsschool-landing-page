@@ -957,6 +957,11 @@ html[data-theme="dark"] .logo-dark {
     justify-content: space-between;
 }
 
+.price-modal{
+    display: flex;
+    justify-content: space-between;
+}
+
 .close-btn{
     width: 100px;
     display: flex;

@@ -146,6 +146,7 @@ const sizeArray = document.querySelectorAll('.size-btn');
 const sizeNumbers = document.querySelectorAll('.size-number');
 const sizeTexts = document.querySelectorAll('.size-text');
 const additivesItems = document.querySelectorAll('.additives-item');
+const addArray = document.querySelectorAll('.add-btn');
 const addNumbers = document.querySelectorAll('.add-number');
 const addTexts = document.querySelectorAll('.add-text');
 
@@ -153,38 +154,64 @@ function openModal(product, i, category) {
   overlay.classList.add('active');
   title.textContent = product.name;
   descr.textContent = product.description;
+  let price = Number(product.price);
+  console.log(price);
   priceWrapper.textContent = product.price;
   modalImage.src = `img/${category}-${i + 1}.jpg`;
   modalImage.alt = product.name;
+  sizeArray[0].classList.add('active');
 
   Object.entries(product.sizes).forEach(([key, item], i) => {
     sizeNumbers[i].textContent = `${key.toUpperCase()}`;
     sizeTexts[i].textContent = `${item.size}`;
+    let addedPrice = 0;
+    sizeArray[i].addEventListener('click', () => {
+      sizeArray.forEach(item => {
+        item.classList.remove('active');
+      });
+      price-=addedPrice;
+      sizeArray[i].classList.add('active');
+      addedPrice = Number(item['add-price']);
+      price += Number(item['add-price']);
+      priceWrapper.textContent = price;
+    });
+    
   });
 
   product.additives.forEach((item, i) => {
-    // addArray[i].addEventListener('click')
+    addArray[i].addEventListener('click', () => {
+      if (addArray[i].classList.contains('active')) {
+        addArray[i].classList.remove('active');
+        price -= Number(item['add-price']);
+      } else {
+        addArray[i].classList.add('active');
+        price += Number(item['add-price']);
+      }
+      priceWrapper.textContent = price;
+    })
     addNumbers[i].textContent = `${i + 1}`;
     addTexts[i].textContent = `${item.name}`;
   });
 
-  sizeBtns.addEventListener('click', (evt) => {
-    sizeArray.forEach(item => {
-      item.classList.remove('active');
-    });
+  // sizeBtns.addEventListener('click', (evt) => {
+  //   sizeArray.forEach(item => {
+  //     item.classList.remove('active');
+  //   });
 
-    const currSize = evt.target.closest('.size-btn');
+  //   const currSize = evt.target.closest('.size-btn');
+  //   let index = sizeArray.indexOf(currSize);
 
-    if (!currSize) {
-      return;
-    }
+  //   if (!currSize) {
+  //     return;
+  //   }
 
-    currSize.classList.add('active');
+  //   currSize.classList.add('active');
+  //   console.log(index);
 
-    cardsData.forEach((item, i) => {
-      renderCard(item, i, category);
-    });
-  });
+  //   cardsData.forEach((item, i) => {
+  //     renderCard(item, i, category);
+  //   });
+  // });
 
 
 
@@ -202,4 +229,11 @@ overlay.addEventListener('click', (evt) => {
 function closeModal() {
   overlay.classList.remove('active');
   document.documentElement.classList.remove('no-scroll');
+  addArray.forEach(item => {
+    item.classList.remove('active');
+  });
+
+    sizeArray.forEach(item => {
+    item.classList.remove('active');
+  });
 }
