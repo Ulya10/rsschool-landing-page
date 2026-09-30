@@ -141,8 +141,13 @@ const title = document.querySelector('.modal-info h3');
 const descr = document.querySelector('.descr');
 const priceWrapper = document.querySelector('.price-wrapper');
 const closeBtn = document.querySelector('.close-btn');
-const sizeItems = document.querySelectorAll('.size-item');
+const sizeBtns = document.querySelector('.size');
+const sizeArray = document.querySelectorAll('.size-btn');
+const sizeNumbers = document.querySelectorAll('.size-number');
+const sizeTexts = document.querySelectorAll('.size-text');
 const additivesItems = document.querySelectorAll('.additives-item');
+const addNumbers = document.querySelectorAll('.add-number');
+const addTexts = document.querySelectorAll('.add-text');
 
 function openModal(product, i, category) {
   overlay.classList.add('active');
@@ -152,19 +157,41 @@ function openModal(product, i, category) {
   modalImage.src = `img/${category}-${i + 1}.jpg`;
   modalImage.alt = product.name;
 
-  product.additives.forEach((item, i) => {
-    additivesItems[i].textContent = `${i + 1}. ${item.name}`;
+  Object.entries(product.sizes).forEach(([key, item], i) => {
+    sizeNumbers[i].textContent = `${key.toUpperCase()}`;
+    sizeTexts[i].textContent = `${item.size}`;
   });
 
-  Object.entries(product.sizes).forEach(([key, item], i) => {
-    sizeItems[i].textContent = `${key.toUpperCase()}. ${item.size}`;
+  product.additives.forEach((item, i) => {
+    // addArray[i].addEventListener('click')
+    addNumbers[i].textContent = `${i + 1}`;
+    addTexts[i].textContent = `${item.name}`;
   });
+
+  sizeBtns.addEventListener('click', (evt) => {
+    sizeArray.forEach(item => {
+      item.classList.remove('active');
+    });
+
+    const currSize = evt.target.closest('.size-btn');
+
+    if (!currSize) {
+      return;
+    }
+
+    currSize.classList.add('active');
+
+    cardsData.forEach((item, i) => {
+      renderCard(item, i, category);
+    });
+  });
+
+
 
   document.documentElement.classList.add('no-scroll');
 }
 
 overlay.addEventListener('click', (evt) => {
-console.log(evt.target);
   if (evt.target.classList.contains('overlay') || evt.target.classList.contains('close-btn')) {
     closeModal();
   }

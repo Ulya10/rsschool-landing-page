@@ -782,7 +782,7 @@ html[data-theme="dark"] .logo-dark {
     margin: 40px 0;
 }
 
-.catalog-btn {
+.catalog-btn, .size-btn, .add-btn {
     display: flex;
     align-items: center;
     gap: 5px;
@@ -793,7 +793,7 @@ html[data-theme="dark"] .logo-dark {
     height: 46px;
 }
 
-.catalog-btn-pic {
+.catalog-btn-pic, .size-number, .add-number {
     background-color: var(--bc-container);
     display: flex;
     align-items: center;
@@ -802,17 +802,18 @@ html[data-theme="dark"] .logo-dark {
     height: 30px;
     background-color: var(--bord-primary);
     border-radius: 100px;
+    color: var(--text-primary);
 }
 
-.catalog-btn.active {
+.catalog-btn.active, .size-btn.active, .add-btn.active {
     background-color: var(--bc-container);
     color: var(--text-inverse);
 }
 
-.catalog-btn.active .catalog-btn-pic {
+.catalog-btn.active .catalog-btn-pic,
+.size-btn.active .size-number, 
+.add-btn.active .add-number {
     background-color: var(--bc-primary);
-
-
 }
 
 
@@ -948,6 +949,20 @@ html[data-theme="dark"] .logo-dark {
     padding-left: 10px;
     padding-right: 20px;
     height: 46px;
+}
+
+.modal-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.close-btn{
+    width: 100px;
+    display: flex;
+    align-items: center;
+justify-content: center;
+    font-size: 16px;
 }
 
 
